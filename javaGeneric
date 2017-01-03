@@ -1,0 +1,29 @@
+ public static <E> void PrintSachGiaoKhoa (ArrayList<E> arraylist)
+{
+   for(E o: arrayList)
+{
+   if(o.getClass() == SachGiaoKhoa.class){
+    ((SachGiaoKhoa) o).Print();
+    }
+else 
+{
+   ((SachThamKhao) o).Print();   
+}
+}
+}
+public static <E> double TinhTongThanhTien (ArrayList<E> al)
+{
+     double tong =0;
+       for(E o: arrayList)
+{
+   if(o.getClass() == SachGiaoKhoa.class){
+     tong+= ((SachGiaoKhoa) o).ThanhTien();
+    }
+else 
+{
+   tong+= ((SachThamKhao) o).ThanhTien();  
+}
+   return tong;
+
+}
+/* generic Java // template C++ */
